@@ -14,7 +14,7 @@ RUN echo "docker ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER docker
 
 ENV FORCE -y
-RUN sudo curl -sS https://get.pimoroni.com/piglow | bash
+RUN sudo curl -sS https://get.pimoroni.com/piglow | bash -s -y
 RUN sudo apt-get install python-piglow
 
 # Set our working directory
