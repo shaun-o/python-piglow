@@ -8,8 +8,9 @@ FROM resin/%%RESIN_MACHINE_NAME%%-python
 #    alsa-utils libasound2-dev && \
 #    apt-get clean && rm -rf /var/lib/apt/lists/*
 
+ENV MIN_INSTALL TRUE
+RUN curl -sS https://get.pimoroni.com/piglow | bash
 RUN apt-get install python-piglow
-RUN pip2 install piglow
 
 # Set our working directory
 WORKDIR /usr/src/app
