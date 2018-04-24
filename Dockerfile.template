@@ -10,7 +10,7 @@ FROM resin/%%RESIN_MACHINE_NAME%%-python
 
 RUN useradd docker && echo "docker:docker" | chpasswd
 RUN mkdir -p /home/docker && chown -R docker:docker /home/docker
-ADD docker ALL=(ALL) NOPASSWD: ALL to /etc/sudoers
+ADD "docker ALL=(ALL) NOPASSWD: ALL" to /etc/sudoers
 USER docker
 
 RUN sudo dcurl -sS https://get.pimoroni.com/piglow | bash
