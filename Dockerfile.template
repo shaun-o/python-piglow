@@ -12,8 +12,8 @@ RUN useradd docker && echo "docker:docker" | chpasswd
 RUN mkdir -p /home/docker && chown -R docker:docker /home/docker
 USER docker
 
-RUN curl -sS https://get.pimoroni.com/piglow | bash
-RUN apt-get install python-piglow
+RUN sudo dcurl -sS https://get.pimoroni.com/piglow | bash
+RUN sudo apt-get install python-piglow
 
 # Set our working directory
 WORKDIR /usr/src/app
