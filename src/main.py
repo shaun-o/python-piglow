@@ -1,5 +1,5 @@
 import sys
-from flask import Flask
+import piglow
 app = Flask(__name__)
 
 @app.route('/')
