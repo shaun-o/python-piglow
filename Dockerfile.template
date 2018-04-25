@@ -31,7 +31,7 @@ USER docker
 
 ENV FORCE -y
 RUN sudo curl -sS https://get.pimoroni.com/piglow | bash -s -- -y
-RUN sudo apt-get install python-piglow
+RUN sudo pip2 install piglow
 
 # main.py will run when container starts up on the device
 CMD ["python","src/main.py"]
