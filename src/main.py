@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    piglow.red(64)
+    piglow.show()
     return 'Shaun This is  Python Hello World!' + sys.version
 
 if __name__ == '__main__':
