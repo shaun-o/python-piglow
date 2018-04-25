@@ -29,9 +29,10 @@ ENV INITSYSTEM on
 
 USER docker
 
-ENV FORCE -y
 RUN sudo curl -sS https://get.pimoroni.com/piglow | bash -s -- -y
 RUN sudo pip2 install piglow
+
+USER root
 
 # main.py will run when container starts up on the device
 CMD ["python","src/main.py"]
